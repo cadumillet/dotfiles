@@ -1,3 +1,4 @@
+# hello
 # Install developer command line tools if needed
 if ! command -v xcode-select -p &> /dev/null; then
   echo "Installing command line tools"
