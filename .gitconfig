@@ -1,0 +1,27 @@
+[user]
+  name = Cadu Millet
+  email = cadumillet@icloud.com
+  useConfigOnly = true
+
+[core]
+  excludesfile = ~/.gitignore
+
+[alias]
+  ca = commit -am
+  cm = commit -m
+  st = status -s
+  sw = switch
+  lp = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cd)%Creset' --abbrev-commit --date=rfc
+  lpn = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset - %C(magenta)%cn%Creset' --abbrev-commit --date=relative -n
+  lpu = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset - %C(magenta)%cn%Creset' --abbrev-commit --date=relative
+  lpd = log --pretty=format:'%Cgreen%cd%Creset %Cred%h%Creset %C(yellow)%d%Creset %s' --abbrev-commit --date=short
+  dt = "!f() { git diff-tree --no-commit-id --name-only $1 -r | awk -F/ '{print $NF}'; }; f"
+  fr = "!f() { git fetch origin $1 && git rebase origin/$1; }; f"
+  rh = "!f() { git reset head~$1; }; f"
+  ro = reset --hard @{u}
+
+[pull]
+  ff = only
+
+[push]
+  autoSetupRemote = true
