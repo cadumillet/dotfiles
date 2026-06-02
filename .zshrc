@@ -43,6 +43,4 @@ alias -- -="cd -"
 
 alias reload="source ~/.zshrc"
 
-alias st="git st"
-alias cm="git cm"
-alias lp="git lp"
+alias g="git"
